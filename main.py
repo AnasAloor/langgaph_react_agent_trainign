@@ -21,6 +21,10 @@ import sys
 import time
 import argparse
 from typing import Optional
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Add src to path
 sys.path.insert(0, os.path.dirname(__file__))
@@ -229,8 +233,8 @@ Examples:
     parser.add_argument(
         "--model",
         type=str,
-        default="gemini-1.5-flash",
-        help="Model to use (default: gemini-1.5-flash)"
+        default="gemini-2.5-flash-lite",
+        help="Model to use (default: gemini-2.5-flash-lite)"
     )
     
     args = parser.parse_args()
